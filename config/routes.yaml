@@ -5,3 +5,6 @@ index:
 admin:
     path: /admin
     controller: App\Controller\AdminController:index
+
+logout:
+    path: /logout
