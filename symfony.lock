@@ -407,6 +407,9 @@
     "webmozart/assert": {
         "version": "1.3.0"
     },
+    "wwsh/symfony-handlebars": {
+        "version": "dev-master"
+    },
     "zendframework/zend-code": {
         "version": "3.3.0"
     },
