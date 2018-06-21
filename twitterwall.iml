@@ -208,7 +208,6 @@
           <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
           <root url="file://$MODULE_DIR$/vendor/wwsh/symfony-handlebars" />
           <root url="file://$MODULE_DIR$/vendor/zendframework/zend-code" />
-          <root url="file://$MODULE_DIR$/vendor/zendframework/zend-eventmanager" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
@@ -310,7 +309,6 @@
           <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
           <root url="file://$MODULE_DIR$/vendor/wwsh/symfony-handlebars" />
           <root url="file://$MODULE_DIR$/vendor/zendframework/zend-code" />
-          <root url="file://$MODULE_DIR$/vendor/zendframework/zend-eventmanager" />
         </SOURCES>
       </library>
     </orderEntry>
