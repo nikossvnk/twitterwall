@@ -3,6 +3,15 @@
 
 {% block body %}
 
-    {{ dump(res) }}
+    {% for message in app.flashes('error') %}
+        <div class="flash-notice">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    {{ form_start(twitterForm) }}
+    {{ form_widget(twitterForm) }}
+    {{ form_end(twitterForm) }}
+
 
 {% endblock %}

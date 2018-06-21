@@ -37,4 +37,9 @@ class MediawallManager
         return $this->repository->getTwitterCreds();
     }
 
+    public function setTwitterCreds($values)
+    {
+        return $this->repository->setTwitterCreds($values);
+    }
+
 }
