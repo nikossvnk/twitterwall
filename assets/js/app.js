@@ -5,7 +5,15 @@ require('../css/global.scss')
 const $ = require('jquery');
 require('bootstrap-sass');
 require('../js/handlebars.js');
-$(document).ready(function() {
-    var body=$('body');
+
+var source
+var template
+
+
+
+
+
+$(document).ready(function () {
+
 
 });
