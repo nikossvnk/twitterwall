@@ -40,7 +40,9 @@ class DefaultController extends Controller
                 $twitter['consumerKey'],
                 $twitter['consumerSecret'],
                 $twitter['accessToken'],
-                $twitter['accessTokenSecret']
+                $twitter['accessTokenSecret'],
+                null,
+                true
             )
 
         ]);
