@@ -22,7 +22,11 @@ services:
     # as action arguments even if you don't extend any base controller class
     App\Controller\:
         resource: '../src/Controller'
+        arguments: ['@Commercetools\Core\Client', '@App\Manager\MediawallManager']
         tags: ['controller.service_arguments']
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Repository\MediawallRepository:
+        arguments: [false, '@commercetools.cache', '@commercetools.client', '@commmercetools.mapper.factory']
