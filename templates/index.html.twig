@@ -16,7 +16,7 @@
                         <img src="{{ tweet.user.profile_image_url }}"/>
                     </div>
                     <div class="col-7">
-                        <strong class="d-inline-block mb-2 text-success" style="margin-bottom: 1px !important;">   {{ tweet.user.screen_name |raw }}</strong>
+                        <strong class="d-inline-block mb-2 text-success" style="margin-bottom: 1px !important;"> <a href=""> {{ tweet.user.screen_name |raw }}</a></strong>
                         <div class=" text-muted" style="font-size: 9px;">{{ tweet.user.description |raw }} </div>
                     </div>
                 </div>
