@@ -13,7 +13,7 @@ class MediawallRepository extends Repository
 {
     public function getCustomObjects()
     {
-        $categoriesRequest = RequestBuilder::of()->categories()->query()->sort($sort);
+        $categoriesRequest = RequestBuilder::of()->categories()->query()->sort('id asc');
 
         return $this->executeRequest($categoriesRequest);
     }
