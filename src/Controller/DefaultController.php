@@ -31,26 +31,24 @@ class DefaultController extends Controller
 
     public function index()
     {
+        $twitter = $this->manager->getTwitterCreds()->getValue();
 
         $feed = new MixedFeed([
 
             new TwitterSearchFeed(
-                [
-                    '#cthack', // do not specify a key for string searchs
-                ]
-            // you can add a doctrine cache provider
+                $twitter['hashtags'],
+                $twitter['consumerKey'],
+                $twitter['consumerSecret'],
+                $twitter['accessToken'],
+                $twitter['accessTokenSecret']
             )
 
         ]);
 
         $res = $feed->getItems(12);
 
-        $cart = $this->manager->getCustomObjects();
-
-//        return new JsonResponse($res);
         return $this->render('index.html.twig', [
-            'res' => $res,
-            'cart' => $cart
+            'res' => $res
         ]);
 
     }

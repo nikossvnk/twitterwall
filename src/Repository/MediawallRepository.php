@@ -11,10 +11,10 @@ use Commercetools\Symfony\CtpBundle\Model\Repository;
 
 class MediawallRepository extends Repository
 {
-    public function getCustomObjects()
+    public function getTwitterCreds()
     {
-        $categoriesRequest = RequestBuilder::of()->categories()->query()->sort('id asc');
+        $twitterCreds = RequestBuilder::of()->customObjects()->getByContainerAndKey('credentials', 'twitter');
 
-        return $this->executeRequest($categoriesRequest);
+        return $this->executeRequest($twitterCreds);
     }
 }

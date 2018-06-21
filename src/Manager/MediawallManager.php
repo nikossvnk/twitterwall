@@ -32,9 +32,9 @@ class MediawallManager
         $this->dispatcher = $dispatcher;
     }
 
-    public function getCustomObjects()
+    public function getTwitterCreds()
     {
-        return $this->repository->getCustomObjects();
+        return $this->repository->getTwitterCreds();
     }
 
 }
