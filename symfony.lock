@@ -59,6 +59,9 @@
             "ref": "c1431086fec31f17fbcfe6d6d7e92059458facc1"
         }
     },
+    "doctrine/event-manager": {
+        "version": "1.0.x-dev"
+    },
     "doctrine/inflector": {
         "version": "v1.3.0"
     },
@@ -73,6 +76,12 @@
     },
     "doctrine/orm": {
         "version": "v2.6.1"
+    },
+    "doctrine/persistence": {
+        "version": "1.0.x-dev"
+    },
+    "doctrine/reflection": {
+        "version": "1.0.x-dev"
     },
     "easycorp/easy-log-handler": {
         "version": "1.0",
@@ -142,6 +151,9 @@
     },
     "psr/simple-cache": {
         "version": "1.0.1"
+    },
+    "ralouphie/getallheaders": {
+        "version": "2.0.5"
     },
     "rezozero/mixedfeed": {
         "version": "v1.1.0"
@@ -433,8 +445,5 @@
     },
     "zendframework/zend-code": {
         "version": "3.3.0"
-    },
-    "zendframework/zend-eventmanager": {
-        "version": "3.2.1"
     }
 }

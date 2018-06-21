@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/twitterwall.iml" filepath="$PROJECT_DIR$/twitterwall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mediawall4.iml" filepath="$PROJECT_DIR$/.idea/mediawall4.iml" />
     </modules>
   </component>
 </project>

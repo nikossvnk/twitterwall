@@ -62,7 +62,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
-      <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
@@ -101,6 +100,17 @@
       <path value="$PROJECT_DIR$/vendor/abraham/twitteroauth" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/cache/tag-interop" />
+      <path value="$PROJECT_DIR$/vendor/cache/adapter-common" />
+      <path value="$PROJECT_DIR$/vendor/commercetools/php-sdk" />
+      <path value="$PROJECT_DIR$/vendor/cache/apcu-adapter" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/commercetools/symfony-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
