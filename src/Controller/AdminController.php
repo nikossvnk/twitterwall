@@ -41,6 +41,7 @@ class AdminController extends Controller
             $consumerSecret = $twitterForm->get('consumerSecret')->getData();
             $accessToken = $twitterForm->get('accessToken')->getData();
             $accessTokenSecret = $twitterForm->get('accessTokenSecret')->getData();
+            $numOfTweets = $twitterForm->get('numOfTweets')->getData();
 
             $hashtags = $twitterForm->get('hashtags')->getData();
 
@@ -49,11 +50,12 @@ class AdminController extends Controller
                 "consumerSecret" => $consumerSecret,
                 "accessToken" => $accessToken,
                 "accessTokenSecret" => $accessTokenSecret,
-                "hashtags" => explode(' ', $hashtags)
+                "hashtags" => explode(' ', $hashtags),
+                "numOfTweets" => $numOfTweets
             ];
 
             try {
-                $customer = $this->manager->setTwitterCreds($values);
+                $this->manager->setTwitterCreds($values);
             } catch (\Error $e){
                 $this->addFlash('error', $e->getMessage());
             }
