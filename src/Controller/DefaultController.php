@@ -47,7 +47,7 @@ class DefaultController extends Controller
 
         ]);
 
-        $res = $feed->getItems(12);
+        $res = $feed->getItems((int)$twitter['numOfTweets']);
 
         return $this->render('index.html.twig', [
             'res' => $res

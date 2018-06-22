@@ -18,6 +18,7 @@ class TwitterType extends AbstractType
         $builder->add('accessToken', TextType::class, ['required' => true, 'label' => 'accessToken']);
         $builder->add('accessTokenSecret', TextType::class, ['required' => true, 'label' => 'accessTokenSecret']);
         $builder->add('hashtags', TextType::class, ['required' => true, 'label' => 'hashtags']);
+        $builder->add('numOfTweets', TextType::class, ['required' => true, 'label' => 'Number of Tweets']);
         $builder->add('submit', SubmitType::class);
     }
 }
