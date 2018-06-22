@@ -3,45 +3,8 @@
 {% block title %}Twitter tweet wall {% endblock %}
 
 {% block body %}
-    <div style="display: none">
-        {{ dump(res) }}
+   <div style="display: none">
+         {{ dump(res) }}
     </div>
-    <div id="tweetContainer" class="container">
-    <div class="row mb-2">
-        {% for tweet in res %}
-            {% autoescape %}
-                <div class="col-md-6">
-                    <div class="card flex-md-row mb-4 box-shadow h-md-250">
-                        <div class="card-body d-flex flex-column align-items-start">
-                            <div class="d-inline-block mb-2 text-primary"><img
-                                        src="{{ tweet.user.profile_image_url }}"/>
-                                <span>
-                                <a style="color:rgb(32, 173, 146);font-size: 20px;color:rgb(32, 173, 146);padding-left: 10px;"
-                                   href="https://twitter.com/{{ tweet.user.screen_name |raw }}"
-                                   target="_blank">{{ tweet.user.screen_name |raw }}</a>
-                                <span class="mb-1 text-muted" style="font-size: 9px">({{ tweet.user.name |raw }}) </span>
-                                    </span>
-                            </div>
-
-
-                            <p class="card-text mb-auto" style="font-size: 12px">{{ tweet.canonicalMessage }} </p>
-                            <span style="color:rgb(32, 173, 146);float:left">
-                            {% for tags in tweet.entities.hashtags %}
-                                <a href="https://twitter.com/hashtag/{{ tags.text|raw }}"
-                                   style="color:rgb(32, 173, 146)" target="_blank"> #{{ tags.text|raw }}&nbsp;</a>
-                            {% endfor %}
-                            </span>
-                        </div>
-                        {% if  tweet.extended_entities is defined %}
-                            <img class="card-img-right flex-auto d-none d-lg-block"
-                                 data-src="holder.js/200x250?theme=thumb"
-                                 alt="Thumbnail [200x250]"
-                                 src="{{ tweet.extended_entities.media[0].media_url_https|raw }}"
-                                 data-holder-rendered="true" style="width: 200px; height: 250px;">
-                        {% endif %}
-                    </div>
-                </div>
-            {% endautoescape %}
-        {% endfor %}
-    </div>
+    {% include 'twitter.html.twig' %}
 {% endblock %}
