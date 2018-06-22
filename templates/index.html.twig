@@ -27,6 +27,13 @@
                         {% for tags in tweet.entities.hashtags %}
                             <span style="color:green;float:left">#{{ tags.text|raw }}&nbsp; </span>
                         {% endfor %}
+
+        {% if  tweet.extended_entities is defined %}
+            <img classs="card-img-right flex-auto d-none d-lg-block"
+                 src="{{tweet.extended_entities.media[0].media_url_https|raw }}"
+                 data-holder-rendered="true" style="width: 200px; height: 250px;">
+        {% endif %}
+
                         </div>
                     </div>
                 </div>
