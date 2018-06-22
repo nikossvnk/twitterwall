@@ -49,6 +49,8 @@ class DefaultController extends Controller
 
         $res = $feed->getItems((int)$twitter['numOfTweets']);
 
+        array_multisort(array_column($res, 'id'), SORT_DESC, $res);
+
         return $this->render('index.html.twig', [
             'res' => $res
         ]);
