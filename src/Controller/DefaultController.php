@@ -13,6 +13,7 @@ use RZ\MixedFeed\InstagramFeed;
 use RZ\MixedFeed\TwitterFeed;
 use RZ\MixedFeed\TwitterSearchFeed;
 use RZ\MixedFeed\FacebookPageFeed;
+use Symfony\Component\Routing\Annotation\Route;
 
 
 class DefaultController extends Controller
@@ -29,7 +30,7 @@ class DefaultController extends Controller
         $this->manager = $manager;
     }
 
-    public function index()
+    public function getTwitterFeed()
     {
         $twitter = $this->manager->getTwitterCreds()->getValue();
 
@@ -51,9 +52,29 @@ class DefaultController extends Controller
 
         array_multisort(array_column($res, 'id'), SORT_DESC, $res);
 
+        return $res;
+    }
+
+
+    public function index()
+    {
+        $res =$this-> getTwitterFeed();
         return $this->render('index.html.twig', [
             'res' => $res
         ]);
-
     }
+
+    /**
+     * @Route("/embed")
+     */
+    public function embed()
+    {
+        $res = $this-> getTwitterFeed();
+        return $this->render('embed.html.twig', [
+            'res' => $res
+        ]);
+    }
+
+
+
 }
